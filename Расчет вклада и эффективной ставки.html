@@ -1,0 +1,19 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var sum = +prompt("Введите сумму вклада");
+	var percent = +prompt("Введите процент по вкладу");
+	var inflation = +prompt("Введите значение инфляции");
+	var period = +prompt("Введите срок вклада");
+	var i = 1;
+	var effectivePercent = (((1 + percent * 0.01) / (1 + inflation * 0.01)) - 1) * 100;
+
+	while(i <= period) {
+		sum = sum + (sum * percent * 0.01);
+		document.write("В конце " + i + " года:" + sum.toFixed(2) + " рублей. <br />");
+			i++;
+	}
+
+	document.write("Эффективная ставка вклада - " + effectivePercent.toFixed(2) + "% <br />");
+
+</script>

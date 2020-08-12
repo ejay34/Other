@@ -1,0 +1,81 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+var maxTryCount = 3;
+var tryCount = 0;
+var num = 0
+var trueCount = 0;
+
+function askQuestion(question, answer){
+		var userAnswer = prompt(question);
+		userAnswer = userAnswer.toLowerCase();		//Заменяет все буквы на маленькие
+		if (userAnswer == answer[i]){
+			alert("Поздравляю! Вы угадали!");
+				trueCount++;
+		} else {
+			alert("Не угадали");
+	}
+
+var trueCount = 0;
+
+askQuestion("Зимой и летом одним цветом?", ["ёлка", "ель", "елка", "елочка", "ёлочка"]);
+askQuestion("Не лает, не кусает, а в дом не пускает?", "замок");
+askQuestion("Сидит дед во сто шуб одет?", "лук");
+
+
+alert("Отгаданных загадок " + trueCount + "!")
+
+/*
+//Первая загадка
+num++;
+var answer = prompt("Загадка №" + num + "!\nЗимой и летом одним цветом?");
+	answer = answer.toLowerCase();		//Заменяет все буквы на маленькие
+	for(tryCount = 1; tryCount < maxTryCount; tryCount++){
+		if (answer == "ёлка" || answer == "ель" || answer == "елка" || answer == "елочка" || answer == "ёлочка") {
+			alert("Поздравляю! Вы угадали!");
+			trueCount++;
+			break;
+		} else {
+			userAnswer = prompt("Попробуйте еще раз.\n У вас осталось " + (maxTryCount - tryCount) + " попыток");
+		}
+	}
+	if (tryCount >= maxTryCount)
+	alert("Не угадали");
+
+//Вторая загадка
+num++;
+var answer = prompt("Загадка №" + num + "!\nНе лает, не кусает, а в дом не пускает?");
+	answer = answer.toLowerCase();
+	for(tryCount = 1; tryCount < maxTryCount; tryCount++){
+		if (answer == "замок") {
+			alert("Поздравляю! Вы угадали!");
+			trueCount++;
+			break;
+		} else {
+			userAnswer = prompt("Попробуйте еще раз.\n У вас осталось " + (maxTryCount - tryCount) + " попыток");
+		} 
+	}
+	if (tryCount >= maxTryCount)
+		alert("Не угадали");
+
+//Третья загадка
+num++;
+var answer = prompt("Загадка №" + num + "!\nСидит дед во сто шуб одет?");
+	answer = answer.toLowerCase();
+	for(tryCount = 1; tryCount < maxTryCount; tryCount++){
+		if (answer == "лук") {
+			alert("Поздравляю! Вы угадали!");
+			trueCount++;
+			break;
+		} else {
+			userAnswer = prompt("Попробуйте еще раз.\n У вас осталось " + (maxTryCount - tryCount) + " попыток");
+		} 
+	}
+	if (tryCount >= maxTryCount)
+		alert("Не угадали");
+
+//Подведение итогов
+alert("Отгаданных загадок " + trueCount + "!") */
+
+
+</script>

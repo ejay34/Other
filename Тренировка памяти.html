@@ -1,0 +1,48 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+function compareAnswers(userAnswer, answer){
+	if (userAnswer == answer){
+	alert("Все верно!");
+} else {
+	alert("Неверно! Правильный ответ " + answer);
+}
+}
+
+var numbers = [];
+
+for (var i = 0; i < 5; i++) {
+	var randomNumber = parseInt(Math.random() * 100);
+	numbers.push(randomNumber);
+}
+
+alert("Запомните числа и их порядок: " + numbers);
+
+var userAnswer = +prompt("Каким было первое число?");
+compareAnswers(userAnswer, numbers[0]);
+/* if (userAnswer == numbers[0]){
+	alert("Все верно!");
+} else {
+	alert("Неверно! Правильный ответ " + numbers[0]);
+} */
+
+userAnswer = +prompt("А последнее число?");
+//alert(numbers[4]); //Так делать нехорошо. При увеличении или уменьшении массива - это число уже не будет последним
+//alert(numbers[ numbers.length - 1 ]); //То же самое, что numbers[4]
+compareAnswers(userAnswer, numbers[ numbers.length - 1 ]);
+
+/* if(userAnswer == numbers[ numbers.length - 1 ]){
+	alert("Верно!")
+} else	{
+	alert ("Не угадали. Правильный ответ " + numbers[ numbers.length - 1 ])
+} */
+var n = parseInt(Math.random() * numbers.length);
+userAnswer = +prompt("А как насчет числа под номером " + (n + 1) + "?");
+compareAnswers(userAnswer, numbers[n]);
+
+/* if(userAnswer == numbers[n]){
+	alert("Верно!")
+} else	{
+	alert ("Не угадали. Правильный ответ " + numbers[n])
+} */
+</script>

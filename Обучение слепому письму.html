@@ -1,0 +1,57 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function generateText(letters, length){
+
+		var text = "";
+		for(var i = 0; i < length; i++){
+			var n = getRandomNumber(letters.length - 1);
+			text = text + letters[n];
+		}
+		return text;
+	}
+
+	function getRandomNumber(max){
+		return Math.round(Math.random() * max);
+	}
+
+	alert("Вас приветствует программа обучения слепой печати");
+
+	function levelLow(letters){
+		while(true){
+			alert("Положите 4 пальца левой руки - на клавиши Ф, Ы, В, А. Запомните, что буква А находится под вашим указательным пальцем, В - под средним, Ы - под безымянным, а Ф - под мизинцем.\nТеперь не спеша набирайте текст. Постарайтесь не смотреть на клавиатуру.");
+			alert("Воспроизведите последовательность из букв " + letters);
+
+			var text = generateText(letters, 10);
+			var userText = prompt(text);
+			if (userText == text){
+				alert("Все верно!");
+				break
+			} else {
+				alert("Вы ошиблись. Попробуйте еще раз");
+			}
+		}
+	}
+
+	levelLow(["ф", "а"]);
+	levelLow(["ф", "ы", "в", "а"]);
+
+	function levelHigh(letters){
+		while(true){
+			alert("Положите 4 пальца левой руки - на клавиши Ф, Ы, В, А, а 4 пальца правой руки - на клавиши Ж, Д, Л, О. Запомните, что буква А находится под вашим указательным пальцем, В - под средним, Ы - под безымянным, а Ф - под мизинцем левой руки; Буква О - под указательным пальцем, Л - под средним, Д - под безымянным, а Ж - под мизинцем правой руки.\nТеперь не спеша набирайте текст. Постарайтесь не смотреть на клавиатуру.");
+			alert("Воспроизведите последовательность из букв " + letters);
+
+			var text = generateText(letters, 10);
+			var userText = prompt(text);
+			if (userText == text){
+				alert("Все верно!");
+				break
+			} else {
+				alert("Вы ошиблись. Попробуйте еще раз");
+			}
+		}
+	}
+
+	levelHigh(["ф", "ы", "в", "а", "о", "л", "д", "ж"]);
+
+</script>
